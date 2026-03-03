@@ -41,7 +41,11 @@ public class Car {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
 	public void setModel(String model) {
 		this.model = model;
 	}
@@ -66,6 +70,10 @@ public class Car {
 	public int getId() {
 		return id;
 	}
+
+    public String getBrand() {
+        return brand;
+    }
 	
 	public String getModel() {
 		return model;
@@ -87,6 +95,7 @@ public class Car {
 		return mileage;
 	}
 	
+    // toString printing car specifications.
 	@Override
 	public String toString() {
 		return ("ID: " + id + " | Brand: " + brand + " | Model: " + model + " | Year: " + year + " | Fuel: " + fuel + " | Color: " + color + " | Mileage: " + mileage);

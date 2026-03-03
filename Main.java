@@ -5,13 +5,17 @@
 
 public class Main {
 	public static void main(String[] args) {
-		Car defaultCar = new Car();
-		Car testCar = new Car(10982, "Toyota", "Prius", 2016, "CNG", "Blue", 12);
-		
-        System.out.println("Default Car Print Test:");
-		System.out.println(defaultCar);
-        System.out.println("----------------------------------------------------------------------------------------------");
-        System.out.println("Test Car Print Test:");
-        System.out.println(testCar);
+        // Methods to load and display car data.
+        CarDataManager dataManager = new CarDataManager();
+        dataManager.loadCars("Car_Data.csv");
+
+        // Verification of loaded data.
+        dataManager.displayCarCount();
+
+        // Displays the first 100 entries.
+        dataManager.displayCars(100);
+
+
+        
 	}
 }
